@@ -1,124 +1,125 @@
-# Food Delivery Earnings & Productivity Tracker
+# Financial Dashboard App
 
-A comprehensive application for food delivery workers to track earnings, expenses, and optimize their workflow using AI-powered insights.
+A complete financial tracking application built with the MERN stack (MongoDB, Express, React, Node.js). This application allows users to track their earnings, expenses, and view comprehensive analytics on their financial data.
 
 ## Features
 
-- **Earnings Tracking**: Log and analyze your earnings across multiple delivery platforms
-- **Expense Management**: Track fuel, maintenance, and other delivery-related expenses
-- **Mileage Tracking**: Record miles driven for tax deduction purposes
-- **AI-Powered Insights**: Get recommendations for optimal working hours and locations
-- **Performance Analytics**: View detailed metrics on your earnings per hour, per mile, and per delivery
-- **Tax Preparation**: Export reports for tax filing with categorized deductible expenses
-- **Multi-Platform Support**: Works with UberEats, DoorDash, GrubHub, Postmates, and more
+- 🔐 **User Authentication**: Secure login and registration system
+- 💰 **Earnings Management**: Track and manage all income sources 
+- 💸 **Expense Tracking**: Monitor where your money is going
+- 📊 **Analytics Dashboard**: Visualize your financial data with charts and summaries
+- 📱 **Responsive Design**: Works great on both desktop and mobile devices
 
-## Tech Stack
+## Project Structure
 
-- **Frontend**: React with Material-UI
-- **Backend**: Node.js with Express
-- **Database**: MongoDB
-- **Authentication**: JWT-based auth
-- **Charts**: Chart.js for data visualization
-- **AI/ML**: Custom algorithms for earnings prediction and optimization
+The project is divided into two main parts:
+
+- **Frontend**: React application with Redux for state management
+- **Backend**: Node.js/Express API with MongoDB for data storage
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (v16+)
-- MongoDB (local or Atlas)
-- npm or yarn
+- Node.js (v14 or later)
+- MongoDB (local installation or MongoDB Atlas account)
 
 ### Installation
 
-1. Clone the repository
+1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/food-delivery-app.git
-   cd food-delivery-app
+   git clone https://github.com/yourusername/fd-app.git
+   cd fd-app
    ```
 
-2. Install backend dependencies
+2. Install backend dependencies:
    ```
    cd backend
    npm install
    ```
 
-3. Install frontend dependencies
+3. Install frontend dependencies:
    ```
    cd ../frontend
    npm install
    ```
 
-4. Create a `.env` file in the backend directory with the following variables:
+### Configuration
+
+1. Create a `.env` file in the backend directory with the following variables:
    ```
-   NODE_ENV=development
    PORT=5000
    MONGO_URI=your_mongodb_connection_string
    JWT_SECRET=your_jwt_secret
-   JWT_EXPIRE=30d
    ```
 
 ### Running the Application
 
-#### Development Mode
+1. Start the backend server:
+   ```
+   cd backend
+   npm run dev
+   ```
+
+2. Start the frontend development server:
+   ```
+   cd frontend
+   npm start
+   ```
+
+3. The application will be available at `http://localhost:3000`
+
+## Testing
+
+Currently, the application has two types of tests for the backend:
+
+1. Unit tests for controllers
+2. Integration tests for authentication routes
+
+Run tests with:
 ```
-# From the backend directory
-npm run dev
-```
-This will start both the backend server and the React frontend in development mode.
-
-#### Backend Only
-```
-# From the backend directory
-npm run server
+cd backend
+npm test
 ```
 
-#### Frontend Only
-```
-# From the frontend directory
-npm start
-```
+## Mock Authentication
 
-## API Documentation
+For testing purposes, you can use the following mock credentials:
 
-The API provides the following endpoints:
+- Email: `admin@example.com` / Password: `admin123`
+- Email: `user@example.com` / Password: `user123`
 
-### Authentication
-- `POST /api/users` - Register a new user
-- `POST /api/users/login` - Authenticate user & get token
-- `GET /api/users/profile` - Get user profile (protected)
-- `PUT /api/users/profile` - Update user profile (protected)
+## Technologies Used
 
-### Earnings
-- `GET /api/earnings` - Get all earnings for a user (protected)
-- `GET /api/earnings/summary` - Get earnings summary statistics (protected)
-- `POST /api/earnings` - Create a new earning (protected)
-- `GET /api/earnings/:id` - Get earning by ID (protected)
-- `PUT /api/earnings/:id` - Update an earning (protected)
-- `DELETE /api/earnings/:id` - Delete an earning (protected)
+### Frontend
+- React.js
+- Redux Toolkit for state management
+- Material-UI for UI components
+- Formik and Yup for form validation
+- Chart.js for data visualization
+- React Router for navigation
 
-### Expenses
-- `GET /api/expenses` - Get all expenses for a user (protected)
-- `GET /api/expenses/summary` - Get expenses summary statistics (protected)
-- `POST /api/expenses` - Create a new expense (protected)
-- `GET /api/expenses/:id` - Get expense by ID (protected)
-- `PUT /api/expenses/:id` - Update an expense (protected)
-- `DELETE /api/expenses/:id` - Delete an expense (protected)
+### Backend
+- Node.js with Express
+- MongoDB with Mongoose
+- JWT for authentication
+- Jest for testing
 
-### Analytics
-- `GET /api/analytics/profit` - Calculate profit metrics (protected)
-- `GET /api/analytics/platform-performance` - Get performance metrics by platform (protected)
-- `GET /api/analytics/optimal-hours` - Get optimal working hours (protected)
-- `GET /api/analytics/earnings-prediction` - Predict weekly earnings (protected)
+## Future Improvements
 
-### Dashboard
-- `GET /api/dashboard` - Get dashboard overview data (protected)
+- Add more comprehensive analytics
+- Add budgeting features
+- Implement data export functionality
+- Add recurring transactions
+- Create a mobile app with React Native
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
 
-## Acknowledgments
+## Acknowledgements
 
-- Thanks to all the food delivery workers who provided feedback during development
-- Icons provided by Material-UI and FontAwesome 
+- [Material-UI](https://mui.com/)
+- [Chart.js](https://www.chartjs.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [MongoDB](https://www.mongodb.com/) 
