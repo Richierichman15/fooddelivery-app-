@@ -8,7 +8,8 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix ../frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "test": "jest"
+    "test": "jest",
+    "test:doordash": "node tests/doordashTest.js"
   },
   "keywords": [
     "food-delivery",

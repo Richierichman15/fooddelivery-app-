@@ -16,6 +16,7 @@ const earningRoutes = require('./routes/earningRoutes');
 const expenseRoutes = require('./routes/expenseRoutes');
 const analyticsRoutes = require('./routes/analyticsRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
+const deliveryRoutes = require('./routes/deliveryRoutes');
 
 // Import middleware
 const { errorHandler } = require('./middleware/errorMiddleware');
@@ -44,6 +45,7 @@ app.use('/api/earnings', earningRoutes);
 app.use('/api/expenses', expenseRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/deliveries', deliveryRoutes);
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
